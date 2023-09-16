@@ -1,0 +1,154 @@
+* {
+    font-family: arial;
+     margin: 0;
+     padding: 0;
+     
+}
+@media screen and (max-width: 800px) {
+    .wrap-text-after-20-chars {
+        white-space: pre-wrap;
+        word-break: break-word;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .wrap-text-after-10-chars {
+        white-space: pre-wrap;
+        word-break: break-word;
+    }
+}
+
+.content {
+   
+  }
+  
+  @media (max-height: 500px) {
+    .content {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-height: 700px) {
+    .content {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+  
+  @media (max-height: 900px) {
+    .content {
+      grid-template-columns: 1fr 3fr;
+    }
+  }
+  
+  @media (max-height: 1200px) {
+    .content {
+      grid-template-columns: 1fr 4fr;
+    }
+  }
+  
+
+body {
+    margin-top: 50px;
+    background-color: rgb(12, 9, 15);
+    color: white;
+  }
+  
+  .input-wrap {
+    
+    
+  }
+  
+  .chatbot-logo {
+    display: flex;
+    position: sticky;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content {
+    max-height: 680px;
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .content::-webkit-scrollbar { 
+    display: none; 
+}
+  .content::after{
+    content: "";
+  clear: both;
+  display: table;
+  }
+  
+  .chatbot-logo img {
+    width: 40px;
+    margin-left: 10px;
+  }
+  
+  .chatboxes {
+display: grid;
+margin: 0 20%;
+width: 100%;
+grid-template-rows: repeat(auto-fill, minmax(0, 1fr));
+justify-content: center;
+align-items: center;                          
+grid-template-rows: 1fr;                       
+  }                                                          
+  
+  .player-input {
+ 
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    margin: 0 25%;
+  }
+  
+  .computer-answer-div,
+  .player-answer-div {
+    background: linear-gradient(#cd3535, #424aaa);
+    position: relative;
+    margin-bottom: 20px;
+    max-width: 300px;
+    border-radius: 15px;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    width: fit-content;
+    border: 2px solid white;
+    align-items: center;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+.computer-answer-div img {
+    width: 50px;
+    height: 50px;
+  position: absolute;
+  right: -60px;
+  top: -8px;
+    filter: brightness(0) invert(1);
+}
+.player-answer-div img {
+    width: 50px;
+    height: 50px;   
+    border-radius: 50%;
+  position: absolute;
+  left: -60px;
+  top: -2px;
+}
+
+.computer-answer-div {
+    float: right;
+}
+.player-answer-div {
+    float: left;
+}
